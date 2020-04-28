@@ -1,7 +1,27 @@
-  
+
+const teclado = (() =>{ evento.keyCode == 32})
+const touch = (()=>{evento.click })
+document.addEventListener('click', function(evento){
+    if(touch){
+        console.log("salta con touch");
+
+        if(nivel.muerto ==false)
+        saltar();
+        else{
+            nivel.velocidad = 9;
+            nube.velocidad = 1;
+            cactus.x = ancho + 100;
+            nube.x = ancho + 100;
+            nivel.marcador = 0;
+            nivel.muerto = false;
+
+            
+        }
+    }
+});
 document.addEventListener('keydown', function(evento){
-    if(evento.keyCode == 32){
-        console.log("salta");
+    if(teclado){
+        console.log("salta con tecla");
 
         if(nivel.muerto ==false)
         saltar();
